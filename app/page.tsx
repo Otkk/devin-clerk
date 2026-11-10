@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { appConfig } from "@/app.config";
 
+const highlights = [
+  { emoji: "🥾", label: "Trilhas" },
+  { emoji: "🧗", label: "Escaladas" },
+  { emoji: "⛺", label: "Acampamentos" },
+];
+
 export default function Home() {
   return (
     <section className="mx-auto flex max-w-3xl flex-col items-center gap-8 px-6 py-24 text-center">
@@ -8,16 +14,25 @@ export default function Home() {
         {appConfig.emoji}
       </span>
       <h1 className="text-5xl font-bold tracking-tight">{appConfig.name}</h1>
-      <p className="max-w-xl text-lg text-black/70">{appConfig.description}</p>
+      <p lang="pt-BR" className="max-w-xl text-lg text-black/70">{appConfig.description}.</p>
+      <ul lang="pt-BR" className="flex flex-wrap justify-center gap-3">
+        {highlights.map((item) => (
+          <li
+            key={item.label}
+            className="rounded-full border border-accent/30 bg-accent/5 px-4 py-1.5 text-sm font-medium text-accent"
+          >
+            <span aria-hidden>{item.emoji}</span> {item.label}
+          </li>
+        ))}
+      </ul>
       <Link
         href="/dashboard"
         className="rounded-full bg-accent px-6 py-3 font-medium text-white shadow-sm transition hover:opacity-90"
       >
         Get early access →
       </Link>
-      <p className="text-sm text-black/50">
-        This page is public. The early-access page should be for signed-in users
-        only.
+      <p lang="pt-BR" className="text-sm text-black/50">
+        Planeje sua próxima aventura ao ar livre, em qualquer lugar do mundo.
       </p>
     </section>
   );
