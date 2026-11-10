@@ -11,10 +11,6 @@ export const appConfig = {
   accent: "#2f7d4f",
   upcomingFeatures: [
     {
-      title: "Busca de trilhas",
-      description: "Filtrar trilhas por país, dificuldade e distância.",
-    },
-    {
       title: "Mapa de acampamentos",
       description: "Ver campings num mapa interativo.",
     },
