@@ -14,6 +14,9 @@ export function Header() {
           <Link href="/dashboard" className="hover:text-accent">
             Dashboard
           </Link>
+          <Link href="/trilhas" lang="pt-BR" className="hover:text-accent">
+            Trilhas
+          </Link>
           <Show when="signed-out">
             <SignInButton>
               <button className="font-medium hover:text-accent">Sign in</button>
