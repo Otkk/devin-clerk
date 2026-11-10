@@ -14,13 +14,13 @@ export default async function DashboardPage() {
         <span className="text-4xl" aria-hidden>
           🚧
         </span>
-        <h1 className="text-3xl font-bold">Olá, {displayName}!</h1>
+        <h1 lang="pt-BR" className="text-3xl font-bold">Olá, {displayName}!</h1>
         <p className="text-lg text-black/70">
           {appConfig.name} is coming soon. You&apos;re on the early-access list.
           Here&apos;s what we&apos;re building next:
         </p>
       </div>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div lang="pt-BR" className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {appConfig.upcomingFeatures.map((feature, index) => (
           <FeatureCard key={feature.title} feature={feature} index={index} />
         ))}

@@ -14,8 +14,8 @@ export default function Home() {
         {appConfig.emoji}
       </span>
       <h1 className="text-5xl font-bold tracking-tight">{appConfig.name}</h1>
-      <p className="max-w-xl text-lg text-black/70">{appConfig.description}.</p>
-      <ul className="flex flex-wrap justify-center gap-3">
+      <p lang="pt-BR" className="max-w-xl text-lg text-black/70">{appConfig.description}.</p>
+      <ul lang="pt-BR" className="flex flex-wrap justify-center gap-3">
         {highlights.map((item) => (
           <li
             key={item.label}
@@ -31,7 +31,7 @@ export default function Home() {
       >
         Get early access →
       </Link>
-      <p className="text-sm text-black/50">
+      <p lang="pt-BR" className="text-sm text-black/50">
         Planeje sua próxima aventura ao ar livre, em qualquer lugar do mundo.
       </p>
     </section>
